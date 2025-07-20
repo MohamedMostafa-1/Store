@@ -1,0 +1,174 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Men",
+      "image": "https://example.com/images/men.jpg",
+      "subcategories": [
+        "T-Shirts",
+        "Shirts",
+        "Hoodies & Sweatshirts",
+        "Jackets & Coats",
+        "Pants & Trousers",
+        "Jeans",
+        "Shorts",
+        "Suits & Blazers",
+        "Activewear",
+        "Underwear"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Women",
+      "image": "https://example.com/images/women.jpg",
+      "subcategories": [
+        "T-Shirts & Tops",
+        "Blouses & Shirts",
+        "Dresses",
+        "Hoodies & Sweatshirts",
+        "Jackets & Coats",
+        "Pants & Trousers",
+        "Jeans",
+        "Skirts",
+        "Activewear",
+        "Lingerie & Underwear"
+      ]
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "subcategory": "T-Shirts",
+      "name": "Men's White T-Shirt",
+      "price": 19.99,
+       "isDeal": true,
+      "image1": "https://images.pexels.com/photos/12922525/pexels-photo-12922525.jpeg",
+      "image2": "https://images.pexels.com/photos/26288586/pexels-photo-26288586.jpeg",
+      "gallery": [
+        "https://images.pexels.com/photos/12922526/pexels-photo-12922526.jpeg",
+        "https://images.pexels.com/photos/12922527/pexels-photo-12922527.jpeg",
+        "https://images.pexels.com/photos/12922528/pexels-photo-12922528.jpeg"
+      ],
+      "description": "Classic white cotton T-Shirt for men.",
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "subcategory": "T-Shirts",
+      "name": "Men's Black T-Shirt",
+      "price": 19.99,
+       "isDeal": true,
+      "image1": "https://images.pexels.com/photos/5325899/pexels-photo-5325899.jpeg",
+      "image2": "https://images.pexels.com/photos/5325750/pexels-photo-5325750.jpeg",
+      "gallery": [
+        "https://images.pexels.com/photos/5325900/pexels-photo-5325900.jpeg",
+        "https://images.pexels.com/photos/5325901/pexels-photo-5325901.jpeg",
+        "https://images.pexels.com/photos/5325902/pexels-photo-5325902.jpeg"
+      ],
+      "description": "Comfortable black cotton T-Shirt.",
+      "gender": "male"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "subcategory": "T-Shirts",
+      "name": "Men's Gray T-Shirt",
+      "price": 19.99,
+       "isDeal": true,
+      "image1": "https://images.pexels.com/photos/3026284/pexels-photo-3026284.jpeg",
+      "image2": "https://images.pexels.com/photos/3026283/pexels-photo-3026283.jpeg",
+      "gallery": [
+        "https://images.pexels.com/photos/3026285/pexels-photo-3026285.jpeg",
+        "https://images.pexels.com/photos/3026286/pexels-photo-3026286.jpeg",
+        "https://images.pexels.com/photos/3026287/pexels-photo-3026287.jpeg"
+      ],
+      "description": "Soft gray cotton T-Shirt.",
+      "gender": "male"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "subcategory": "Shirts",
+      "name": "Men's Casual Shirt",
+      "price": 29.99,
+       "isDeal": true,
+      "image1": "https://images.pexels.com/photos/29381847/pexels-photo-29381847.jpeg",
+      "image2": "https://images.pexels.com/photos/29381849/pexels-photo-29381849.jpeg",
+      "gallery": [
+        "https://images.pexels.com/photos/29381848/pexels-photo-29381848.jpeg",
+        "https://images.pexels.com/photos/29381849/pexels-photo-29381849.jpeg",
+        "https://images.pexels.com/photos/29381850/pexels-photo-29381850.jpeg"
+      ],
+      "description": "Casual slim-fit shirt for men.",
+      "gender": "male"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "subcategory": "Hoodies & Sweatshirts",
+      "name": "Men's Gray Hoodie",
+      "price": 39.99,
+       "isDeal": true,
+      "image1": "https://images.pexels.com/photos/20036215/pexels-photo-20036215.jpeg",
+      "image2": "https://images.pexels.com/photos/15050186/pexels-photo-15050186.jpeg",
+      "gallery": [
+        "https://images.pexels.com/photos/20036216/pexels-photo-20036216.jpeg",
+        "https://images.pexels.com/photos/20036217/pexels-photo-20036217.jpeg",
+        "https://images.pexels.com/photos/20036218/pexels-photo-20036218.jpeg"
+      ],
+      "description": "Warm gray hoodie with front pocket.",
+      "gender": "male"
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "subcategory": "Dresses",
+      "name": "Women's Floral Dress",
+      "price": 49.99,
+       "isDeal": true,
+      "image1": "https://images.pexels.com/photos/8995982/pexels-photo-8995982.jpeg",
+      "image2": "https://images.pexels.com/photos/18977034/pexels-photo-18977034.jpeg",
+      "gallery": [
+        "https://images.pexels.com/photos/8995983/pexels-photo-8995983.jpeg",
+        "https://images.pexels.com/photos/8995984/pexels-photo-8995984.jpeg",
+        "https://images.pexels.com/photos/8995985/pexels-photo-8995985.jpeg"
+      ],
+      "description": "Elegant floral evening dress for women."
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "subcategory": "Hoodies & Sweatshirts",
+      "name": "Women's Gray Hoodie",
+      "price": 34.99,
+       "isDeal": true,
+      "image1": "https://images.pexels.com/photos/32998806/pexels-photo-32998806.jpeg",
+      "image2": "https://images.pexels.com/photos/32998801/pexels-photo-32998801.jpeg",
+      "gallery": [
+        "https://images.pexels.com/photos/32998807/pexels-photo-32998807.jpeg",
+        "https://images.pexels.com/photos/32998808/pexels-photo-32998808.jpeg",
+        "https://images.pexels.com/photos/32998809/pexels-photo-32998809.jpeg"
+      ],
+      "description": "Comfortable gray hoodie for women."
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "subcategory": "Hoodies & Sweatshirts",
+      "name": "Women's Gray Hoodie",
+      "price": 34.99,
+       "isDeal": true,
+      "image1": "https://images.pexels.com/photos/6311235/pexels-photo-6311235.jpeg",
+      "image2": "https://images.pexels.com/photos/6311397/pexels-photo-6311397.jpeg",
+      "gallery": [
+        "https://images.pexels.com/photos/32998807/pexels-photo-32998807.jpeg",
+        "https://images.pexels.com/photos/32998808/pexels-photo-32998808.jpeg",
+        "https://images.pexels.com/photos/32998809/pexels-photo-32998809.jpeg"
+      ],
+      "description": "Comfortable gray hoodie for women."
+    }
+  ]
+}

@@ -1,103 +1,107 @@
+"use client";
+
+import Products from "@/Components/Products";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const slides = [
+  {
+    id: 1,
+    title: "Summer Sale Collections",
+    description: "Sale! Up to 50% off!",
+    img: "https://images.pexels.com/photos/1486064/pexels-photo-1486064.jpeg",
+    url: "/Products",
+    bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
+  },
+  {
+    id: 2,
+    title: "Winter Sale Collections",
+    description: "Sale! Up to 50% off!",
+    img: "https://images.pexels.com/photos/5337778/pexels-photo-5337778.jpeg",
+    url: "/Products",
+    bg: "bg-gradient-to-r from-pink-50 to-blue-50",
+  },
+  {
+    id: 3,
+    title: "Spring Sale Collections",
+    description: "Sale! Up to 50% off!",
+    img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800",
+    url: "/Products",
+    bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
+  },
+];
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [current, setCurrent] = useState(0);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Auto Slider
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div>
+      <div className="relative h-[calc(100vh-80px)] overflow-hidden">
+        <div
+          className="w-max h-full flex transition-all ease-in-out duration-1000"
+          style={{ transform: `translateX(-${current * 100}vw)` }}
+        >
+          {slides.map((slide) => (
+            <div
+              className={`${slide.bg} w-screen h-full flex flex-col gap-16 md:flex-row`}
+              key={slide.id}
+            >
+              {/* Text Container */}
+              <div className="h-1/2 md:w-1/2 md:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center">
+                <h2 className="text-xl lg:text-3xl 2xl:text-5xl">{slide.description}</h2>
+                <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold">{slide.title}</h1>
+                <Link href={slide.url}>
+                  <button className="rounded-md bg-black text-white py-3 px-4">
+                   SHOP NOW
+                    
+                  </button>
+                </Link>
+              </div>
+              {/* Image Container */}
+              <div className="h-1/2 md:w-1/2 md:h-full sm:h-[200px] relative">
+                <Image
+                  src={slide.img}
+                  alt={slide.title}
+                  fill
+                  sizes="100vw"
+                  className=""
+                />
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Dots */}
+        <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2 flex gap-4">
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`w-2 h-2 rounded-full ring-1 ring-gray-600 cursor-pointer flex items-center justify-center ${
+                current === index ? "scale-150" : ""
+              }`}
+              onClick={() => setCurrent(index)}
+            >
+              {current === index && (
+                <div className="w-[6px] h-[6px] bg-gray-600 rounded-full"></div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <h1 className="text-3xl font-bold">Products</h1>
+        <Products />
+      </div>
     </div>
   );
 }
