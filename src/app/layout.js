@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import LoadingLayout from '@/components/LoadingLayout';
+import LoadingLayout from '@/Components/LoadingLayout';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
