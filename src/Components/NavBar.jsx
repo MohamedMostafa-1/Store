@@ -22,6 +22,7 @@ const NavBar = () => {
     updateCartCount();
     window.addEventListener('cartUpdated', updateCartCount);
     window.addEventListener('storage', updateCartCount);
+    // clean CART
     return () => {
       window.removeEventListener('cartUpdated', updateCartCount);
       window.removeEventListener('storage', updateCartCount);

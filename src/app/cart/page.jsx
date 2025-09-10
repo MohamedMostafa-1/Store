@@ -14,11 +14,7 @@ const CartPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-      const cartWithQuantity = storedCart.map((item) => ({
-        ...item,
-        quantity: item.quantity || 1,
-        price: parseFloat(item.price),
-      }));
+      const cartWithQuantity = storedCart.map((item) => ({ ...item, quantity: item.quantity || 1, price: parseFloat(item.price),}));
       setCart(cartWithQuantity);
       setLoading(false); // ✅ إيقاف اللودينج بعد انتهاء 3 ثواني
     }, 2000);

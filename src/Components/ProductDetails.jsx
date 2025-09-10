@@ -28,7 +28,7 @@ const ProductDetails = () => {
       }
 
       setLoading(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [id]);
@@ -43,9 +43,11 @@ const ProductDetails = () => {
     setRelated(relatedItems);
   };
 
+ 
   const handleAddToCart = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const isExist = cart.some((item) => item.id === product.id);
+  // const isExist = cart.find((item) => item.id === product.id);
 
     if (isExist) {
       Swal.fire({

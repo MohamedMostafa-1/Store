@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 const Products = () => {
   const products = data.products;
 
+ // add to cart functionality
   const handleAddToCart = (product) => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const exists = cart.some((item) => item.id === product.id);
@@ -50,6 +51,7 @@ const Products = () => {
             key={product.id}
             className="w-full flex flex-col gap-4 sm:w-[45%] lg:w-[22%]"
           >
+            {/* details Products  */}
             <Link href={`/Products/${product.id}`}>
               <div className="relative w-full h-80">
                 <Image
