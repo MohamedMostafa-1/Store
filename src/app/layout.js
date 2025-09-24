@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
+// import Script from "next/script";
 import "./globals.css";
 import LoadingLayout from '@/Components/LoadingLayout';
 
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <head />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* ✅ Facebook Pixel */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
+        {/* <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
             fbq('init', '1132055088773001');
             fbq('track', 'PageView');
           `}
-        </Script>
+        </Script> */}
 
         {/* Noscript fallback */}
         <noscript>
